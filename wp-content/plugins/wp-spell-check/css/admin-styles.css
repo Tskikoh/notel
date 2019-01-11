@@ -1,0 +1,71 @@
+.request-feature-container { position: fixed; bottom: 0em; right: 50%; margin-right: -200px; z-index: 9999999; width: 400px; background: white; }
+.request-feature-popup { border-right: 2px darkgray solid; border-left: 2px darkgray solid; border-top: 2px darkgrey solid; border-top-left-radius: 15px; border-top-right-radius: 15px; padding: 8px; font-size: 1.3em; text-align: center; margin-bottom: -14px; }
+.request-feature-popup p { font-size: 12px; }
+.request-feature-popup .close-popup { position:absolute; top: 5px; right: 11px; text-decoration: none; }
+.request-feature-popup button { padding: 5px 30px; background-color: #0096ff; color: white; border-radius: 5px; }
+.request-feature { border-right: 2px darkgray solid; border-left: 2px darkgray solid; text-align: center; box-shadow: black 1px -2px 1px;  }
+.request-feature a { margin: 0 16px; font-size: 1.4em; line-height: 1.4em; }
+.wpsc-install-notice { position: fixed; left: 50%; top: 50%; width: 560px; margin: -255px 0 0 -230px; border-radius: 10px; background: white; box-shadow: black 1px 1px 1px; text-align: center; height: 425px; padding: 10px; z-index: 99999; }
+.wpsc-install-content { display: block; width: 100%; vertical-align: top; margin: 10px 0px; }
+.wpsc-install-notice img { display: block; margin: auto; }
+.wpsc-install-dismiss { float: right; text-align: right; }
+.newsletter-submit { background: #228CD8; color: white; padding: 5px; border-radius: 5px; font-weight: bold; }
+.wpsc-misspelled-word { background: yellow; }
+.wpsc-row .Ignore,.wpsc-row span.Add.to.Dictionary, span.wpsc-mass-edit { color: Black; }
+.wpsc-highlight-row, .wpsc-highlight-row a { color: #008200!important; font-weight: bold; font-size: 14px; }
+.wpsc-unselected-row { opacity: 0.55; }
+.wpsc-suggestion-content span, .wpsc-edit-content span, .wpsc-edit-content label { color: #008200; }
+.wpsc-scan-buttons input[disabled],.wpsc-scan-buttons input:disabled { background: darkgrey!important; color: white!important; border-color: grey!important; }
+.wpsc-table .tablenav { float: none!important; display: inline-block; }
+.wpsc-table .fb-comments, .wpsc-table .fb-comments iframe[style] {width: 100% !important;}
+.wpsc-scan-buttons input#submit:active { margin-top: -7px; }
+.wpsc-edit-update-button { margin: 12px 0px; }
+.wpgc-dialog { border: 1px solid black; background: white; position: absolute; z-index:999999; border-radius: 4px; min-width: 100px; }
+.wpgc-dialog ul { margin: 0px; }
+.wpgc-dialog a { text-decoration: none; color: black; background: white!important; }
+.wpgc-dialog a:hover { color:black; }
+.wpgc-dialog hr { margin: 0px; }
+.wpgc-dialog li { padding: 3px 5px 3px 11px; margin: 0px; }
+.wpgc-dialog li:first-child { background: grey; color: black!important; border-top-left-radius: 4px; border-top-right-radius: 4px; padding: 5px; font-weight: bold; }
+#major-publishing-actions { background: white!important; }
+.wpgc-desc .wpgc-desc-content { display: none; }
+#wpgc-scan-results-tab .wp-list-table th { text-align: center; }
+
+.wpsc-install-notice {
+	height: 150px!important;
+	position: absolute!important;
+	margin-top: 15px!important;
+	width: 300px!important;
+	margin-left: 30px!important;
+	background: none!important;
+	z-index: -99!important;
+}
+.wpsc-install-notice div{
+	color: black!important;
+	width: 205px!important;
+	line-height: 20px!important;
+	font-size: 16px!important;
+	margin-top: 43px!important;
+	position: absolute!important;
+	margin-left: 18px!important;
+}
+
+.wpsc-install-notice span {
+	font-size: 16px!important;
+	line-height: 18px!important;
+	font-weight: bold!important;
+	display: block!important;
+}
+.wpsc-install-notice a {
+	font-weight: bold!important;
+	padding: 0px!important;
+	font-size: 14px!important;
+	color: #c11919!important;
+}
+.wpsc-install-notice img {
+	height: 139px!important;
+	width: 240px!important;
+}
+
+#wp-admin-bar-WP_Spell_Check ul { z-index: 9999999999; }
+.wpsc-suggestion-content span { font-weight: bold; color: red!important; }

@@ -1,0 +1,300 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Note Press 0.1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-02 11:52-0600\n"
+"PO-Revision-Date: 2017-07-02 11:52-0600\n"
+"Last-Translator: DataInterlock <postmaster@datainterlock.com>\n"
+"Language-Team: DataInterlock <postmaster@datainterlock.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/Note_Press-admin-menu.php:36 admin/Note_Press-settings.php:36
+msgid "Note Press"
+msgstr "Note Press"
+
+#: admin/Note_Press-admin-menu.php:37 admin/Note_Press-settings.php:37
+msgid "For more information and instructions please visit our website at: "
+msgstr "For more information and instructions please visit our website at: "
+
+#: admin/Note_Press-admin-menu.php:44 admin/Note_Press-settings.php:44
+msgid ""
+"Please consider supporting the development of Note Press by clicking the "
+"image above and becoming a Patreon."
+msgstr ""
+"Please consider supporting the development of Note Press by clicking the "
+"image above and becoming a Patreon."
+
+#: admin/Note_Press-admin-menu.php:59
+msgid "note"
+msgstr "note"
+
+#: admin/Note_Press-admin-menu.php:60
+msgid "notes"
+msgstr "notes"
+
+#: admin/Note_Press-admin-menu.php:102
+msgid "View"
+msgstr "View"
+
+#: admin/Note_Press-admin-menu.php:103
+msgid "Edit"
+msgstr "Edit"
+
+#: admin/Note_Press-admin-menu.php:104
+msgid "Are you sure you want to delete this note?"
+msgstr "Are you sure you want to delete this note?"
+
+#: admin/Note_Press-admin-menu.php:104 admin/Note_Press-admin-menu.php:111
+msgid "Delete"
+msgstr "Delete"
+
+#: admin/Note_Press-admin-menu.php:125 admin/Note_Press-admin-menu.php:139
+msgid "Icon"
+msgstr "Icon"
+
+#: admin/Note_Press-admin-menu.php:126 admin/Note_Press-admin-menu.php:140
+#: admin/class-Note_Press-admin.php:113
+msgid "Title"
+msgstr "Title"
+
+#: admin/Note_Press-admin-menu.php:127 admin/Note_Press-admin-menu.php:141
+msgid "By"
+msgstr "By"
+
+#: admin/Note_Press-admin-menu.php:128
+msgid "To"
+msgstr "To"
+
+#: admin/Note_Press-admin-menu.php:129 admin/Note_Press-admin-menu.php:142
+msgid "Date"
+msgstr "Date"
+
+#: admin/Note_Press-admin-menu.php:130 admin/Note_Press-admin-menu.php:143
+#: admin/class-Note_Press-admin.php:113
+msgid "Priority"
+msgstr "Priority"
+
+#: admin/Note_Press-admin-menu.php:131 admin/class-Note_Press-admin.php:113
+msgid "Read"
+msgstr "Read"
+
+#: admin/Note_Press-admin-menu.php:132 admin/Note_Press-admin-menu.php:144
+#: admin/class-Note_Press-admin.php:113
+msgid "Deadline"
+msgstr "Deadline"
+
+#: admin/Note_Press-admin-menu.php:428
+msgid "Notes"
+msgstr "Notes"
+
+#: admin/Note_Press-admin-menu.php:433
+msgid "Search"
+msgstr "Search"
+
+#: admin/Note_Press-admin-menu.php:456
+msgid "Add A Note"
+msgstr "Add A Note"
+
+#: admin/Note_Press-admin-menu.php:485 admin/Note_Press-admin-menu.php:553
+#: admin/Note_Press-admin-menu.php:844
+msgid "That note was not found."
+msgstr "That note was not found."
+
+#: admin/Note_Press-admin-menu.php:503
+msgid "View a Note"
+msgstr "View a Note"
+
+#: admin/Note_Press-admin-menu.php:507
+msgid "Edit This Note"
+msgstr "Edit This Note"
+
+#: admin/Note_Press-admin-menu.php:509 admin/Note_Press-admin-menu.php:561
+msgid "Back to List"
+msgstr "Back to List"
+
+#: admin/Note_Press-admin-menu.php:513 admin/Note_Press-admin-menu.php:582
+msgid "Title:"
+msgstr "Title:"
+
+#: admin/Note_Press-admin-menu.php:514
+msgid "Date Added/Last Edited:"
+msgstr "Date Added/Last Edited:"
+
+#: admin/Note_Press-admin-menu.php:515
+msgid "Added By:"
+msgstr "Added By:"
+
+#: admin/Note_Press-admin-menu.php:528 admin/Note_Press-admin-menu.php:688
+#: admin/class-Note_Press-admin.php:212
+msgid "Priority:"
+msgstr "Priority:"
+
+#: admin/Note_Press-admin-menu.php:538 admin/Note_Press-admin-menu.php:663
+#: admin/class-Note_Press-admin.php:212
+msgid "Deadline:"
+msgstr "Deadline:"
+
+#: admin/Note_Press-admin-menu.php:540 admin/Note_Press-admin-menu.php:783
+msgid "Contents:"
+msgstr "Contents:"
+
+#: admin/Note_Press-admin-menu.php:569
+msgid "Edit a Note"
+msgstr "Edit a Note"
+
+#: admin/Note_Press-admin-menu.php:573
+msgid "Add a Note"
+msgstr "Add a Note"
+
+#: admin/Note_Press-admin-menu.php:591
+msgid "Enter a title for this note."
+msgstr "Enter a title for this note."
+
+#: admin/Note_Press-admin-menu.php:599
+msgid "To:"
+msgstr "To:"
+
+#: admin/Note_Press-admin-menu.php:624
+msgid ""
+"Choose who you wish to send this note to. Ctl-click to choose multiple "
+"recipients."
+msgstr ""
+"Choose who you wish to send this note to. Ctl-click to choose multiple "
+"recipients."
+
+#: admin/Note_Press-admin-menu.php:641
+msgid "Sticky Note:"
+msgstr "Sticky Note:"
+
+#: admin/Note_Press-admin-menu.php:645
+msgid ""
+"<strong>Note: </strong>Users who do not have the ability to write notes can "
+"only see Sticky Notes."
+msgstr ""
+"<strong>Note: </strong>Users who do not have the ability to write notes can "
+"only see Sticky Notes."
+
+#: admin/Note_Press-admin-menu.php:666
+msgid ""
+"Enter a deadline for this note or leave this field blank for no deadline.</"
+"br> <strong>Not all browswers support a date picker</strong>. If you do not "
+"have the option to select a date, please enter one in the format MM/DD/YYYY."
+msgstr ""
+"Enter a deadline for this note or leave this field blank for no deadline.</"
+"br> <strong>Not all browswers support a date picker</strong>. If you do not "
+"have the option to select a date, please enter one in the format MM/DD/YYYY."
+
+#: admin/Note_Press-admin-menu.php:692
+msgid "Low"
+msgstr "Low"
+
+#: admin/Note_Press-admin-menu.php:693
+msgid "Medium"
+msgstr "Medium"
+
+#: admin/Note_Press-admin-menu.php:694
+msgid "High"
+msgstr "High"
+
+#: admin/Note_Press-admin-menu.php:696
+msgid "Select a priority for this note."
+msgstr "Select a priority for this note."
+
+#: admin/Note_Press-admin-menu.php:700
+msgid "Icon:"
+msgstr "Icon:"
+
+#: admin/Note_Press-admin-menu.php:752
+msgid "Select an icon for this note."
+msgstr "Select an icon for this note."
+
+#: admin/Note_Press-admin-menu.php:779
+msgid "Author/Editor: "
+msgstr "Author/Editor: "
+
+#: admin/Note_Press-admin-menu.php:802 admin/Note_Press-settings.php:87
+msgid "Save"
+msgstr "Save"
+
+#: admin/Note_Press-admin-menu.php:809
+msgid "Update Note"
+msgstr "Update Note"
+
+#: admin/Note_Press-admin-menu.php:813
+msgid "Add Note"
+msgstr "Add Note"
+
+#: admin/Note_Press-admin-menu.php:836 admin/Note_Press-admin-menu.php:889
+msgid "A note must have a title."
+msgstr "A note must have a title."
+
+#: admin/Note_Press-admin-menu.php:1016
+msgid "That note was not found"
+msgstr "That note was not found"
+
+#: admin/Note_Press-admin-menu.php:1023 admin/Note_Press-admin-menu.php:1102
+msgid "Note Deleted!"
+msgstr "Note Deleted!"
+
+#: admin/Note_Press-admin-menu.php:1035
+msgid "Please deactivate and re-activate Note Press to complete the upgrade."
+msgstr "Please deactivate and re-activate Note Press to complete the upgrade."
+
+#: admin/Note_Press-admin-menu.php:1106
+msgid " Notes Deleted!"
+msgstr " Notes Deleted!"
+
+#: admin/Note_Press-admin-menu.php:1115
+msgid "No notes selected."
+msgstr "No notes selected."
+
+#: admin/Note_Press-settings.php:31
+msgid "Settings updated."
+msgstr "Settings updated."
+
+#: admin/Note_Press-settings.php:61 admin/class-Note_Press-admin.php:283
+msgid "Note Press Settings"
+msgstr "Note Press Settings"
+
+#: admin/Note_Press-settings.php:69
+msgid "Note Press User Level:"
+msgstr "Note Press User Level:"
+
+#: admin/Note_Press-settings.php:78
+msgid "Select the level required to create notes with Note Press."
+msgstr "Select the level required to create notes with Note Press."
+
+#: admin/Note_Press-settings.php:92
+msgid "Save Settings"
+msgstr "Save Settings"
+
+#: admin/class-Note_Press-admin.php:108
+msgid "No notes to you."
+msgstr "No notes to you."
+
+#: admin/class-Note_Press-admin.php:212
+msgid "From:"
+msgstr ""
+
+#: admin/class-Note_Press-admin.php:264
+msgid "Note Press - Notes to you"
+msgstr "Note Press - Notes to you"
+
+#~ msgid " Note Deleted!"
+#~ msgstr " Note Deleted!"
+
+#~ msgid "Enter a deadline for this note."
+#~ msgstr "Enter a deadline for this note."

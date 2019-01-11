@@ -1,0 +1,166 @@
+/*
+ Theme Name:   2017 for ノートる（子テーマ）
+ Theme URI:    https://wp-theme.notel.xyz/
+ Description:  Twenty Fifteen Child Theme
+ Author:       ノートPC作りました
+Author URI: https://notel.xyz/
+ Template:    twentyseventeen2
+ Version:      2018.11.21
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  notel-2017
+*/
+
+
+
+/* 縦書き */
+.tategaki {
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	text-align: left;
+	width: 100%;
+	margin-left: auto;
+	max-height: 500px;
+}
+.tategaki sup {
+	position:relative;
+	top:0.01em;
+	left: 0.3em;
+}
+.tategaki sub {
+	position:relative;
+	bottom: 0.01em;
+	right: 0.3em;
+}
+.tategaki a{
+	border-bottom: 0px solid #333;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	text-decoration: overline;
+	-webkit-text-decoration: underline;
+	color: blue;
+	text-decoration-color: blue;
+}
+.tategaki .right{
+	text-decoration: underline;
+	-webkit-text-decoration: overline;
+}
+.tategaki .left{
+	text-decoration: overline;
+	-webkit-text-decoration: underline;
+}
+.tategaki .rbleft {
+    position: relative;
+    right: 0.8em;
+}
+.tategaki .rbleft :not(rt) {
+    position: relative;
+    left: 1.8em;
+}
+
+/* IE10以上 */
+@media all and (-ms-high-contrast: none){
+	.tategaki {
+		text-underline-position: below;
+	}
+	.tategaki sup {
+		top: -0.4em;
+		left: 0.1em;
+	}
+	.tategaki sub {
+		top: 0.4em;
+		right:  0.1em;
+	}
+	.tategaki a{
+		text-decoration: underline;
+		text-underline-position: below;
+	}
+	.tategaki .right{
+		text-decoration: overline;
+	}
+	.tategaki .left{
+		text-decoration: underline;
+		text-underline-position: below;
+	}
+}
+
+/* Edge */
+@supports (-ms-ime-align: auto) {
+	.tategaki {
+		text-underline-position: below;
+	}
+	.tategaki sup {
+		top: -0.4em;
+		left: 0.1em;
+	}
+	.tategaki sub {
+		top: 0.4em;
+		right:  0.1em;
+	}
+	.tategaki a{
+		text-decoration: underline;
+		text-underline-position: below;
+	}
+	.tategaki .right{
+		text-decoration: overline;
+	}
+	.tategaki .left{
+		text-decoration: underline;
+		text-underline-position: below;
+	}
+}
+
+.tategaki a:focus,
+.tategaki a:hover {
+	color: red;
+	text-decoration-color: red;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.tategaki a:visited {
+	color: purple;
+	text-decoration-color: purple;
+}
+
+/* IEアラート */
+.ie_alert{
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    background: rgb(196, 52, 52); /* rgba未対応の古いIE用 */
+    background: rgba(196, 52, 52, 0.95);
+    text-align: center;
+    padding: 10% 0;
+    z-index: 1000;
+}
+.ie_alert span, .ie_alert p, .ie_alert a{
+	color: #fff;
+}
+.ie_alert span.title{
+	display: block;
+	font-size: 9vmin;
+}
+.ie_alert p{
+	font-size: 3vmin;
+	margin: 0;
+   overflow: hidden;
+	text-overflow: ellipsis;
+   white-space: nowrap;
+}
+.ie_alert a{
+	display: inline-block;
+	font-size:  2vmin;
+	margin-top: 3vmin;
+	padding: 1vmin 10vmin;
+	border: solid 1px #fff;
+}
+.ie_alert a:hover{
+	background: rgba(255,255,255,0.1);
+}
+.ie_alert a img{
+	width: 2vmin;
+}
