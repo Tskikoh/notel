@@ -1,6 +1,4 @@
-
-
-<Files ~ "^\.(htaccess|htpasswd)$">
+<Files ~ "^(wp-config\.php|readme\.html|xmlrpc\.php|(.*)\.(htaccess|htpasswd|DS_Store))$">
   deny from all
 </Files>
 
@@ -11,6 +9,7 @@
  # RewriteCond %{REQUEST_URI} !=/maintenance-view.html
  # RewriteRule ^.*$ - [R=503,L]
 #</IfModule>
+
 #SITEGUARD_PLUGIN_SETTINGS_START
 #SITEGUARD_PLUGIN_SETTINGS_END
 
