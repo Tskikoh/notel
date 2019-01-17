@@ -144,6 +144,9 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
 }
+function remove_bar_menus( $wp_admin_bar ) {
+	$wp_admin_bar->remove_menu( 'wp-admin-bar-jwl_links' );
+}
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
