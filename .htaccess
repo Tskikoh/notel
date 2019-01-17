@@ -1,0 +1,28 @@
+
+
+<Files ~ "^\.(htaccess|htpasswd)$">
+  deny from all
+</Files>
+
+#ErrorDocument 503 /maintenance-view.html
+#
+#<IfModule mod_rewrite.c>
+ # RewriteEngine On
+ # RewriteCond %{REQUEST_URI} !=/maintenance-view.html
+ # RewriteRule ^.*$ - [R=503,L]
+#</IfModule>
+#SITEGUARD_PLUGIN_SETTINGS_START
+#SITEGUARD_PLUGIN_SETTINGS_END
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
