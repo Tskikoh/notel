@@ -1,2 +1,6 @@
 Title	Question	Answer	Hint	Star
-問1				
+	あいうえお	aiueo		
+	かきくけこ	kakikukeko		
+				
+				
+				

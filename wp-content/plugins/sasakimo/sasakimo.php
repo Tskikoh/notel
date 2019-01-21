@@ -1,17 +1,13 @@
 <?php
 /*
-Plugin Name: 英単語帳作成
+Plugin Name: 単語帳作成
 Plugin URI: 
-Description: <span style="color: red;">絶対に更新するな</span>
+Description: ささきも
 Author: 	佐々木希歩
-Version: 100.0
+Version: Sasaki Noa
 Author URI: https://app.tki.jp/
 Text Domain: sasakimo
 Domain Path: /languages
-
-https://wordpress.org/plugins/shareadraft/
-Share a Draft
-By Nikolay Bachiyski, Automattic
 */
 $scnum = 1;
 
@@ -83,7 +79,7 @@ if ( ! class_exists( 'Sasa_Kimo' ) ) :
 		}
 
 		function add_admin_pages() {
-			add_submenu_page( 'edit.php', __( '英単語帳作成', 'sasakimo' ), __( '英単語帳作成', 'sasakimo' ),
+			add_submenu_page( 'edit.php', __( '単語帳作成', 'sasakimo' ), __( '単語帳作成！', 'sasakimo' ),
 			'edit_posts', __FILE__, array( $this, 'output_existing_menu_sub_admin_page' ) );
 		}
 
@@ -212,11 +208,123 @@ if ( ! class_exists( 'Sasa_Kimo' ) ) :
 			//print_r($draft_groups);		
 	?>
 
-		<h3><?php _e( '英単語帳を作成', 'sasakimo' ); ?></h3>
+		<h3><?php _e( '単語帳を作成', 'sasakimo' ); ?></h3>
+		<?php
+
+	$user_name = wp_get_current_user() -> user_login;
+
+
+if (empty($_POST["select"])) :
+
+$s=new PDO("mysql:host=mysql133.phy.lolipop.lan;dbname=LAA0613647-oasobi2;charset=utf8;","LAA0613647","Qwerty1234");
+
+$re=$s->query("
+	SELECT post_title 
+	FROM wp11_posts 
+	INNER JOIN wp11_users 
+	ON wp11_posts.post_author = wp11_users.ID 
+	WHERE wp11_posts.post_author 
+	IN (  
+		SELECT wp11_users.ID 
+		FROM wp11_posts 
+		WHERE user_login = '$user_name' 
+	) 
+	AND post_status != 'trash' 
+	AND post_type != 'customize_changeset' 
+	AND post_title != '自動下書き' 
+	AND post_status != 'draft'
+	 AND post_status != 'inherit' 
+	GROUP BY post_title"
+);
+
+	echo "<form action=\"edit.php?page=sasakimo%2Fsasakimo.php\" method=\"POST\">";
+		echo "<p>選んでね</p>";
+		echo "<select name=\"select\">";
+while ($kekka=$re->fetch()) {
+	echo "<option value=\"".strip_tags($kekka[0])."\">";
+	echo strip_tags($kekka[0]);
+	echo "</option>";
+}
+echo "</select>";
+echo "<input type=\"hidden\" name=\"user\" value=\"$user_name\" />";
+echo "<input type=\"submit\" name=\"submit\" value=\"送信\" />";
+echo "</form>";
+
+?>
+
+	<?php elseif (isset($_POST["select"])) : ?>
+		<p>送信した値：<?php echo $_POST["select"]; ?></p>
+		ダウンロードはこちら<br />
+		<a href="<?php echo "/wp-content/plugins/sasakimo/EnglishWord.txt"; ?>">ダウンロード</a>
+
+		<button type="button" onclick="history.back()">戻る</button>
+		<?php 
+
+			$enc = "UTF-8";
+			$s=new PDO("mysql:host=mysql133.phy.lolipop.lan;dbname=LAA0613647-oasobi2;charset=utf8;","LAA0613647","Qwerty1234");
+			$j = 1;
+			$matches = [];
+			$rec = [];
+			$title;
+			$count = 0;
+
+			$result = $s->query("SELECT post_content, post_title
+			FROM wp11_posts
+			INNER JOIN wp11_users ON wp11_posts.post_author = wp11_users.ID
+			WHERE wp11_posts.post_author
+			IN (
+			SELECT wp11_users.ID
+			FROM wp11_posts
+			WHERE user_login = '".$_POST['user']."'
+			)
+			AND post_title = '".$_POST['select']."'	
+			AND post_status != 'trash'
+			AND post_type != 'customize_changeset'
+			AND post_title != '自動下書き'
+			AND post_status != 'draft'
+			AND post_status != 'inherit'
+			AND post_type = 'post'
+			GROUP BY post_title");
+
+
+
+
+			while($rec = $result->fetch()){
+				$rec[0] = strip_tags($rec[0], '<td>');
+				$pattern= '/<td>(.+?)<\/td>/';
+				preg_match_all($pattern, $rec[0], $matches);
+				$title = $rec[1];
+				echo "<br>";
+			}	
+			
+			$save_file_path = __DIR__."/EnglishWord.txt";
+			$file = new SplFileObject($save_file_path, 'w');// ファイルは作成してくれます。
+			$file->setCsvControl("\t");
+
+			$data = [];
+			$data[] = ['Title', 'Question', 'Answer', 'Hint', 'Star'];
+			for($i = 0 ; $i < count($matches, 1) ; $i = $i + 2){
+				$data[] = ["", $matches[1][$i], $matches[1][$i + 1], "", ""];
+				$j++;
+			}
+			foreach ($data as $row) {
+				$file->fputcsv($row);
+			}
+			dd($file);// Laravelの出力用ヘルパ関数
+		?>
+
+	<?php else : ?>
+		<p>不正な値が指定されました。</p>
+		<button type="button" onclick="history.back()">戻る</button>
+
+	<?php endif; ?>
+
+		<!--
 		<form id="sasakimo-share" action="" method="post">
 		<p>
 			<select id="sasakimo-postid" name="post_id">
 			<option value=""><?php _e( 'ノートを選択', 'sasakimo' ); ?></option>
+		
 <?php
 foreach ( $draft_groups as $draft_group ) :
 	if ( $draft_group['posts'] ) :
@@ -244,6 +352,7 @@ endif;
 		<?php wp_nonce_field( 'sasakimo-new-share' ); ?>
 		</form>
 		</div>
+	-->
 <?php
 		}
 
